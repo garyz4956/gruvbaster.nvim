@@ -46,7 +46,7 @@ When everything is highlighted, nothing stands out. With only 4 colors, each bec
 
 ```lua
 {
-  "yourusername/gruvbaster.nvim",
+  "garyz4956/gruvbaster.nvim",
   priority = 1000,
   config = function()
     require("gruvbaster").setup({})
@@ -59,7 +59,7 @@ When everything is highlighted, nothing stands out. With only 4 colors, each bec
 
 ```lua
 use {
-  "yourusername/gruvbaster.nvim",
+  "garyz4956/gruvbaster.nvim",
   config = function()
     require("gruvbaster").setup({})
     vim.cmd("colorscheme gruvbaster")
@@ -154,6 +154,7 @@ require("gruvbaster").setup({
 ### Available Palette Colors
 
 #### Dark Mode Syntax Colors
+
 | Name | Default | Used For |
 |------|---------|----------|
 | `bright_green` | `#b8bb26` | Strings |
@@ -162,6 +163,7 @@ require("gruvbaster").setup({
 | `bright_aqua` | `#8ec07c` | Definitions |
 
 #### Light Mode Syntax Colors
+
 | Name | Default | Used For |
 |------|---------|----------|
 | `faded_green` | `#79740e` | Strings |
@@ -170,6 +172,7 @@ require("gruvbaster").setup({
 | `faded_aqua` | `#427b58` | Definitions |
 
 #### Background Colors (Dark Mode)
+
 | Name | Default | Description |
 |------|---------|-------------|
 | `dark0_hard` | `#1d2021` | Hard contrast background |
@@ -181,6 +184,7 @@ require("gruvbaster").setup({
 | `dark4` | `#7c6f64` | UI elements |
 
 #### Foreground Colors (Dark Mode)
+
 | Name | Default | Description |
 |------|---------|-------------|
 | `light0` | `#fbf1c7` | Brightest foreground |
