@@ -336,11 +336,11 @@ function M.get_highlights(p, config)
     -- Constructors (COLORED - they are definitions)
     ["@constructor"] = { fg = p.definition },
 
-    -- Variables (NOT colored - except definitions)
+    -- Variables (NOT colored - except definitions and parameters)
     ["@variable"] = { fg = p.fg1 },
     ["@variable.builtin"] = { fg = p.fg1 },
-    ["@variable.parameter"] = { fg = p.fg1 },
-    ["@variable.parameter.builtin"] = { fg = p.fg1 },
+    ["@variable.parameter"] = { fg = p.definition },          -- Parameters (COLORED)
+    ["@variable.parameter.builtin"] = { fg = p.definition },  -- Built-in parameters (COLORED)
     ["@variable.member"] = { fg = p.fg1 },
 
     -- Properties (NOT colored)
@@ -355,6 +355,13 @@ function M.get_highlights(p, config)
     ["@tag.builtin"] = { fg = p.fg1 },
     ["@tag.attribute"] = { fg = p.fg1 },
     ["@tag.delimiter"] = { fg = p.punctuation },
+
+    -- Vue-specific tags (aqua)
+    ["@tag.vue"] = { fg = p.definition },
+    ["@tag.builtin.vue"] = { fg = p.definition },
+
+    -- Vue-specific directives (blue) - @click, @submit, etc.
+    ["@function.method.vue"] = { fg = p.info },
 
     -- Markup
     ["@markup"] = { fg = p.fg1 },
@@ -400,7 +407,7 @@ function M.get_highlights(p, config)
     ["@lsp.type.macro"] = { fg = p.fg1 },
     ["@lsp.type.method"] = { fg = p.fg1 },          -- Method references (NOT colored)
     ["@lsp.type.namespace"] = { fg = p.fg1 },
-    ["@lsp.type.parameter"] = { fg = p.fg1 },
+    ["@lsp.type.parameter"] = { fg = p.definition },  -- Parameters (COLORED)
     ["@lsp.type.property"] = { fg = p.fg1 },
     ["@lsp.type.struct"] = { fg = p.fg1 },
     ["@lsp.type.type"] = { fg = p.fg1 },
@@ -836,6 +843,12 @@ function M.get_highlights(p, config)
     FlashCurrent = { fg = p.fg1, bg = p.bg2 },
     FlashPrompt = { fg = p.fg1, bg = p.bg1 },
     FlashPromptIcon = { fg = p.definition },
+
+    -----------------------------------------
+    -- Plugin: Snacks
+    -----------------------------------------
+    SnacksPickerPathHidden = { fg = p.fg4 },
+    SnacksPickerPathIgnored = { fg = p.fg4 },
   }
 
   return highlights

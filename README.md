@@ -10,12 +10,12 @@ When everything is highlighted, nothing stands out. With only 4 colors, each bec
 
 ### The 4 Highlighting Categories
 
-| Category | Color | What Gets Highlighted |
-|----------|-------|----------------------|
-| **Strings** | Green (`#b8bb26`) | String literals, regex, template strings |
-| **Constants** | Purple (`#d3869b`) | Numbers, booleans, nil/null, character literals |
-| **Comments** | Orange (`#fe8019`) | All comments (prominently visible!) |
-| **Definitions** | Aqua (`#8ec07c`) | Function/class/variable definitions |
+| Category        | Color              | What Gets Highlighted                           |
+| --------------- | ------------------ | ----------------------------------------------- |
+| **Strings**     | Green (`#b8bb26`)  | String literals, regex, template strings        |
+| **Constants**   | Purple (`#d3869b`) | Numbers, booleans, nil/null, character literals |
+| **Comments**    | Orange (`#fe8019`) | All comments (prominently visible!)             |
+| **Definitions** | Aqua (`#8ec07c`)   | Function/class/variable definitions             |
 
 ### What Does NOT Get Highlighted
 
@@ -72,7 +72,7 @@ use {
 Clone the repository to your Neovim packages directory:
 
 ```bash
-git clone https://github.com/yourusername/gruvbaster.nvim \
+git clone https://github.com/garyz4956/gruvbaster.nvim \
   ~/.local/share/nvim/site/pack/plugins/start/gruvbaster.nvim
 ```
 
@@ -141,10 +141,10 @@ require("gruvbaster").setup({
   palette_overrides = {
     -- Make comments a lighter orange
     bright_orange = "#e89a5a",
-    
+
     -- Use a different green for strings
     bright_green = "#a9b665",
-    
+
     -- Custom background
     dark0 = "#1e1e1e",
   },
@@ -155,43 +155,43 @@ require("gruvbaster").setup({
 
 #### Dark Mode Syntax Colors
 
-| Name | Default | Used For |
-|------|---------|----------|
-| `bright_green` | `#b8bb26` | Strings |
-| `bright_purple` | `#d3869b` | Constants |
-| `bright_orange` | `#fe8019` | Comments |
-| `bright_aqua` | `#8ec07c` | Definitions |
+| Name            | Default   | Used For    |
+| --------------- | --------- | ----------- |
+| `bright_green`  | `#b8bb26` | Strings     |
+| `bright_purple` | `#d3869b` | Constants   |
+| `bright_orange` | `#fe8019` | Comments    |
+| `bright_aqua`   | `#8ec07c` | Definitions |
 
 #### Light Mode Syntax Colors
 
-| Name | Default | Used For |
-|------|---------|----------|
-| `faded_green` | `#79740e` | Strings |
-| `faded_purple` | `#8f3f71` | Constants |
-| `faded_orange` | `#af3a03` | Comments |
-| `faded_aqua` | `#427b58` | Definitions |
+| Name           | Default   | Used For    |
+| -------------- | --------- | ----------- |
+| `faded_green`  | `#79740e` | Strings     |
+| `faded_purple` | `#8f3f71` | Constants   |
+| `faded_orange` | `#af3a03` | Comments    |
+| `faded_aqua`   | `#427b58` | Definitions |
 
 #### Background Colors (Dark Mode)
 
-| Name | Default | Description |
-|------|---------|-------------|
+| Name         | Default   | Description              |
+| ------------ | --------- | ------------------------ |
 | `dark0_hard` | `#1d2021` | Hard contrast background |
-| `dark0` | `#282828` | Normal background |
+| `dark0`      | `#282828` | Normal background        |
 | `dark0_soft` | `#32302f` | Soft contrast background |
-| `dark1` | `#3c3836` | Lighter background |
-| `dark2` | `#504945` | UI elements |
-| `dark3` | `#665c54` | UI elements |
-| `dark4` | `#7c6f64` | UI elements |
+| `dark1`      | `#3c3836` | Lighter background       |
+| `dark2`      | `#504945` | UI elements              |
+| `dark3`      | `#665c54` | UI elements              |
+| `dark4`      | `#7c6f64` | UI elements              |
 
 #### Foreground Colors (Dark Mode)
 
-| Name | Default | Description |
-|------|---------|-------------|
+| Name     | Default   | Description          |
+| -------- | --------- | -------------------- |
 | `light0` | `#fbf1c7` | Brightest foreground |
-| `light1` | `#ebdbb2` | Normal foreground |
-| `light2` | `#d5c4a1` | Dimmed foreground |
-| `light3` | `#bdae93` | More dimmed |
-| `light4` | `#a89984` | Most dimmed |
+| `light1` | `#ebdbb2` | Normal foreground    |
+| `light2` | `#d5c4a1` | Dimmed foreground    |
+| `light3` | `#bdae93` | More dimmed          |
+| `light4` | `#a89984` | Most dimmed          |
 
 ### Overriding Highlight Groups
 
@@ -202,10 +202,10 @@ require("gruvbaster").setup({
   overrides = {
     -- Custom StatusLine
     StatusLine = { fg = "#ebdbb2", bg = "#504945" },
-    
+
     -- Make comments italic (if your font supports it)
     Comment = { fg = "#fe8019", italic = true },
-    
+
     -- Custom cursor line
     CursorLine = { bg = "#3c3836" },
   },
